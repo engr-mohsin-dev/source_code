@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    color: #f3f3f3;
+    user-select: none;
+
+}
+
+
+html,
+body {
+    width: 100vw;
+    height: max-content;
+
+    background: radial-gradient(#011947, #00040c);
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+
+}
+
+main {
+    width: 90vw;
+    height: 100%;
+
+    margin: 3rem auto;
+    
+}
+
+header {
+    width: 100%;
+    height: max-content;
+    padding: 0  2rem 2rem 2rem;
+
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+}
+
+header p {
+    user-select: none;
+    font-size: .8rem;
+    line-height: 1rem;
+}
+
+
+section {
+    width: 100%;
+    height: max-content;
+
+    background-color: rgba(124, 124, 124, 0.1);
+    box-shadow: 0 0 30px #7a007a;
+
+
+    border-radius: 10px;
+    border: 1px solid #ffffff49;
+
+    padding: 1.5rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+
+
+}
+
+.card {
+
+    margin: 0 auto;
+
+    width: 300px;
+    height: 480px;
+
+    background-color: rgba(124, 124, 124, 0.1);
+    border: 1px solid #ffffff49;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+
+    padding: .75rem;
+
+    transition: all .25s linear 0s;
+}
+
+.card:hover {
+
+    transform: scale(1.05);
+}
+
+.post-picture-container {
+    width: 100%;
+    height: 50%;
+
+
+    overflow: hidden;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.post-picture-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: all .25s linear 0s;
+
+}
+
+.post-picture-container:hover img {
+    transform: scale(1.2);
+}
+
+.post-picture-container .overlay {
+    width: 100%;
+    height: 40%;
+
+    background-color: rgba(54, 10, 82, 0.75);
+    color: #f3f3f3;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+
+    transition: all .25s linear 0s;
+
+}
+
+.post-picture-container:hover .overlay {
+    opacity: 1;
+}
+
+
+
+.post-details {
+    width: 100%;
+    height: 35%;
+
+    text-align: center;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: proximity;
+    scrollbar-width: none;
+}
+
+.post-details h2 {
+    font-size: 1.5rem;
+    margin: .5rem 0;
+}
+
+.post-details p {
+    font-size: .8rem;
+    margin-bottom: .5rem;
+    line-height: 1.1rem;
+}
+
+hr {
+    width: 40%;
+    margin: .3rem auto;
+
+}
+
+.user-details {
+    width: 100%;
+    height: 15%;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.user-details img {
+    width: 3rem;
+    height: 3rem;
+    padding: 3px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all .25s linear 0s;
+    border: 2px solid #f3f3f3;
+    box-shadow: 0 0 6px #f3f3f3;
+    z-index: 1;
+}
+
+.user-details img:hover {
+    transform: scale(4);
+}
+
+.user-details h3 {
+    margin: 0 0 .3rem 0;
+
+}
+
+.user-details h3 span {
+    display: block;
+    font-size: .6rem;
+    font-weight: normal;
+}
+
+
+.user-details .cta a {
+    box-shadow: 0 0 6px #f3f3f3;
+    color: #020d24;
+    font-weight: bold;
+    font-size: .7rem;
+    transition: all .25s linear 0s;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    color: #000714;
+    padding: .3rem .5rem;
+}
+
+.user-details .cta:hover a {
+    color: #f3f3f3;
+    background-color: #000714;
+}
+
+.up-link{
+    
+    margin: 1rem 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.up-link i{
+    color: #f3f3f3;
+    
+    filter:drop-shadow( 0 0 6px #f3f3f3);
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width:425px) {
+
+    section {
+
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+
+
+    }
+
+    .card {
+        /* margin: 0 auto; */
+
+        width: 200px;
+        height: 400px;
+    }
+
+    .post-details h2 {
+        font-size: 1rem;
+    }
+
+    .post-details p {
+        font-size: .5rem;
+        margin-bottom: .5rem;
+        line-height: normal;
+    }
+
+    .user-details {
+        text-align: center;
+        flex-direction: column;
+
+    }
+
+    .user-details h3 {
+        font-size: 1rem;
+
+    }
+
+    .user-details .cta a {
+        font-size: .5rem;
+    }
+
+}

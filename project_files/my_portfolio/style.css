@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
+
+    user-select: none;
+}
+
+:root {
+
+    --main-bg: #0c0c0c;
+    --secondary-bg: #161616;
+    --main-text: #C1C1C1;
+    --secondary-text: #565656;
+}
+
+html,
+body {
+    width: 100vw;
+    height: max-content;
+    background-color: var(--main-bg);
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+main {
+    width: 90%;
+    height: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+    z-index: -1;
+    background-color: var(--main-bg);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem;
+
+}
+
+header {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    background-color: var(--secondary-bg);
+    border-radius: .5rem;
+
+}
+
+.mohsin a {
+    color: var(--main-text);
+
+}
+
+.logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--main-text);
+
+    transition: all .5s ease-in-out 0s;
+
+}
+
+.logo a img {
+    width: 3.5rem;
+}
+
+.logo a:hover {
+    transform: scale(1.1);
+}
+
+nav a i {
+    padding: .3rem;
+    font-size: 1.3rem;
+    color: var(--main-text);
+    transition: all .5s ease-in-out 0s;
+}
+
+nav a:hover i {
+    font-size: 1.6rem;
+}
+
+
+
+
+/* hero section */
+
+.hero-section {
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    border-radius: .5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--main-text);
+    margin: 1rem 0;
+    /* padding: 2rem 0; */
+
+    background-color: var(--secondary-bg);
+}
+
+
+.hero-section img {
+    transition: all .35s ease-in-out 0s;
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+
+    border: 2px solid var(--main-text);
+    padding: .5rem;
+    border-radius: 50%;
+    box-shadow: 0 0 30px var(--main-text);
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.hero-section img:hover {
+    transform: scale(1.1);
+}
+
+.hero-section p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: .5rem 0;
+    line-height: 1.7rem;
+}
+
+.hero-section span {
+    font-size: 1.2rem;
+    color: var(--main-text);
+    text-shadow: 0 0 10px var(--main-text);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.hero-section p i {
+    color: goldenrod;
+    filter: drop-shadow(0 0 2px goldenrod);
+}
+
+.hero-section #desc {
+    font-size: 1rem;
+    text-transform: capitalize;
+    text-shadow: 0 0 10px var(--main-text);
+}
+
+.hero-section #desc span {
+    text-shadow: 0 0 10px goldenrod;
+    color: goldenrod;
+}
+
+.hero-section .btns {
+    display: flex;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+.btns a {
+    padding: .5rem 1rem;
+    color: var(--main-text);
+    border-radius: 10px;
+    background-color: var(--secondary-text);
+    text-align: center;
+    box-shadow: 0 0 10px var(--secondary-text);
+
+}
+
+.btns a:hover {
+    background-color: var(--secondary-bg);
+
+}
+
+.btns a i {
+    font-size: 1rem;
+}
+
+
+/* skills */
+
+.skills {
+    width: 100%;
+    height: max-content;
+    border-radius: .5rem;
+    background-color: var(--secondary-bg);
+    padding: 1.3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+
+
+}
+
+.skills img {
+    border: 1px solid var(--main-text);
+    padding: .3rem;
+    width: 3rem;
+    border-radius: .7rem;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+
+.skills img:hover {
+    transform: scale(1.1);
+}
+
+
+/* projects */
+
+.projects {
+    width: 100%;
+    height: max-content;
+    padding: .5rem 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--secondary-bg);
+    border-radius: .5rem;
+    color: var(--main-text);
+}
+
+.projects h1 {
+    padding: 1rem 0;
+}
+
+.projects hr {
+    width: 40%;
+    border: 1px solid var(--main-text);
+}
+
+
+.card-container {
+    padding: 2rem;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, .25fr));
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    margin: .5rem 0;
+}
+
+.card {
+    border: 1px solid var(--main-text);
+    border-radius: 5px;
+    padding: 0.25rem;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.35s ease-in-out;
+}
+
+.card .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 35%;
+    background-color: var(--secondary-bg);
+    text-align: center;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transition: all 0.35s ease-in-out;
+    opacity: 0;
+}
+
+.overlay a {
+    color: var(--first);
+}
+
+.overlay i {
+    font-size: 2.5rem;
+    background-color: var(--main-bg);
+    border-radius: 50%;
+    padding: 0.5rem;
+    margin: 1rem;
+    transition: background-color 0.35s ease-in-out;
+}
+
+.tooltip-link {
+    position: relative;
+}
+
+.tooltip-link:hover:after {
+    content: attr(title);
+    padding: 10px 16px;
+    border-radius: 5px;
+    background-color: var(--secondary-text);
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    top: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-link:hover:after:before {
+    content: "";
+    border-top: 10px solid var(--third);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.card:hover img {
+    transform: scale(1.2);
+}
+
+.card:hover .overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay a:hover i {
+    background-color: var(--secondary-text);
+}
+
+
+
+/* contact */
+.contact {
+    width: 100%;
+    height: max-content;
+}
+
+.contact-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem 3rem;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.row input,
+.row textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--secondary-bg);
+    border-radius: 5px;
+    background-color: var(--secondary-text);
+    color: var(--main-text);
+    font-size: 600;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--main-text);
+}
+
+.row:first-child input {
+    width: calc(50% - 5px);
+}
+
+.row textarea {
+    height: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--main-text);
+    color: var(--main-bg);
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-text);
+    color: var(--main-text);
+}
+
+.footer {
+    width: 100%;
+    background-color: var(--secondary-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    gap: .5rem;
+    height: max-content;
+    border-radius: .5rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+.social-icons a i {
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: var(--main-text);
+    padding: 1rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover i {
+    color: var(--main-bg);
+    background-color: var(--main-text);
+}
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.copyright hr {
+    margin: 1rem 0 2rem 0;
+    border: 1px solid var(--main-text);
+    width: 40%;
+
+}
+
+.copyright p {
+    word-spacing: .75rem;
+    color: var(--main-text);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+
+}
